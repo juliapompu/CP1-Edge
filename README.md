@@ -27,24 +27,24 @@ O sistema foi **montado fisicamente** e também **simulado no Tinkercad**.
 
 ### 🔗 Simulação no Tinkercad
 
-[Acesse o projeto clicando aqui](https://www.tinkercad.com/things/hhilejn9i0m-cp1?sharecode=t1g3lTe266TYeySYFhy52gTnF_KVH7dBn_OHWbqjPTQ)
+[Acesse o projeto clicando aqui](https://www.tinkercad.com/things/35Ed8K8AP9W-cp1-edge-computing/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard)
 
 ### 🖼️ Imagem da simulação no Tinkercad
 
-> `![Simulação Tinkercad](./img/tinkercad_circuito.png)`
+> `![image](https://github.com/user-attachments/assets/cb7a0da0-6bf6-4799-8cf4-60dec95e4af5)`
 
 ## 🔧 Componentes Utilizados
 
 - 1 × **Arduino Uno R3** (`U1`)  
 - 1 × **Fotorresistor (LDR)** (`Rluz`)  
-- 1 × **Resistor de 10 kΩ** (`R5`) – usado no divisor de tensão com o LDR  
+- 1 × **Resistor de 220 Ω** (`R4`) – usado no divisor de tensão com o LDR  
 - 3 × **LEDs**:
   - 1 × Vermelho (`Dled1`)
   - 1 × Verde (`Dled2`)
   - 1 × Amarelo (`Dled3`)
-- 3 × **Resistores de 330 Ω** (`R1`, `R2`, `R3`) – conectados aos LEDs  
+- 3 × **Resistores de 220 Ω** (`R1`, `R2`, `R3`,) – conectados aos LEDs  
 - 1 × **Buzzer Piezoelétrico** (`PIEZO1`)  
-- 1 × **Resistor de 220 Ω** (`R4`) – associado ao buzzer  
+- 1 × **Resistor de 500 Ω** (`R5`) – associado ao buzzer  
 - Cabos Jumpers  
 - 1 × Protoboard
 
@@ -52,14 +52,14 @@ O sistema foi **montado fisicamente** e também **simulado no Tinkercad**.
 
 ## 🛠️ Montagem do Circuito (Resumo)
 
-- **LDR + resistor de 10kΩ**: leitura feita no pino analógico A0 (formando um divisor de tensão);
+- **LDR + resistor de 220Ω**: leitura feita no pino analógico A0 (formando um divisor de tensão);
 - **LEDs**: conectados aos pinos digitais:
-  - Verde → pino 2
-  - Amarelo → pino 3
-  - Vermelho → pino 4
-- **Buzzer**: conectado ao pino digital 5;
-- Resistores de 330 Ω conectados em série com cada LED;
-- Resistor de 220 Ω conectado ao buzzer para limitar corrente;
+  - Verde → pino 9
+  - Amarelo → pino 8
+  - Vermelho → pino 7
+- **Buzzer**: conectado ao pino digital 6;
+- Resistores de 220 Ω conectados em série com cada LED;
+- Resistor de 500 Ω conectado ao buzzer para limitar corrente;
 - GND e 5V do Arduino distribuídos nos trilhos laterais da protoboard.
 
 ---
