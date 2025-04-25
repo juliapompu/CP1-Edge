@@ -31,7 +31,7 @@ O sistema foi **montado fisicamente** e também **simulado no Tinkercad**.
 
 ### 🖼️ Imagem da simulação no Tinkercad
 
-> `![image](https://github.com/user-attachments/assets/cb7a0da0-6bf6-4799-8cf4-60dec95e4af5)`
+> [image](https://github.com/user-attachments/assets/cb7a0da0-6bf6-4799-8cf4-60dec95e4af5)
 
 ## 🔧 Componentes Utilizados
 
