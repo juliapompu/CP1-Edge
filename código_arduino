@@ -1,0 +1,63 @@
+ 
+int buzzer = 6;         
+int ledVermelho = 7;   
+int ledAmarelo = 8;    
+int ledVerde = 9;      
+int ldr = A0;         
+int valorLdr = 0;      
+ 
+void setup() {
+  Serial.begin(9600);
+  pinMode(buzzer, OUTPUT);
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ldr, INPUT);
+}
+ 
+void apagarLeds() {
+  digitalWrite(ledVermelho, LOW);
+  digitalWrite(ledAmarelo, LOW);
+  digitalWrite(ledVerde, LOW);
+}
+ 
+void loop() {
+  {
+  int value = analogRead (ldr);
+  Serial.println (value);
+  delay(1000);
+ 
+  valorLdr = analogRead (ldr);
+  Serial.println (value);      
+ 
+  if (valorLdr < 10) { //os valores mudam toda vez que você pega um fotoresistor diferente!
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAmarelo, LOW);
+    noTone(buzzer);
+  }
+ 
+   if (valorLdr >= 200 ) { //os valores mudam toda vez que você pega um fotoresistor diferente!
+    digitalWrite(ledVermelho, LOW);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVerde, LOW);
+    noTone(buzzer);
+ 
+  }
+ 
+   if (valorLdr >= 300 ) { //os valores mudam toda vez que você pega um fotoresistor diferente!
+    digitalWrite(ledVermelho, HIGH); 
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVerde, LOW);
+    tone(buzzer, 1000);
+    delay(3000);
+    noTone(buzzer);
+  }
+ 
+ 
+  Serial.print("Valor do LDR: ");
+  Serial.println(valorLdr);
+ 
+  delay(1000);
+ 
+  }
+}
